@@ -1,0 +1,34 @@
+# game options/settings
+TITLE = "Breakout"
+WIDTH = 800
+HEIGHT = 600
+FPS = 60
+
+# define colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+ORANGE = (255, 128, 0)
+
+# Paddle properties
+PADDLE_WIDTH = 100
+PADDLE_HEIGHT = 20
+PADDLE_COLOR = WHITE
+PADDLE_ACC = 1.2
+PADDLE_FRICTION = -0.1
+
+# Ball properties
+BALL_SIZE = 15
+BALL_COLOR = WHITE
+BALL_SPEED = 9
+
+# Brick properties
+BRICK_WIDTH = 50
+BRICK_HEIGHT = 20
+BRICK_ROWS = 5
+BRICK_COLS = 14
+BRICK_SPACING = 5
+BRICK_COLORS = [BLUE, GREEN, YELLOW, ORANGE, RED]
