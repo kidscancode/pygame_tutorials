@@ -1,3 +1,5 @@
+import os
+
 # define some colors (R, G, B)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -13,6 +15,9 @@ HEIGHT = 768  # 16 * 48 or 32 * 24 or 64 * 12
 FPS = 60
 TITLE = "Tilemap Demo"
 BGCOLOR = DARKGREY
+
+game_folder = os.path.dirname(__file__)
+image_folder = os.path.join(game_folder, "image")
 
 TILESIZE = 32
 GRIDWIDTH = WIDTH / TILESIZE
