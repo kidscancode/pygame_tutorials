@@ -1,6 +1,7 @@
 # Pygame template - skeleton for a new pygame project
 import pygame
 import random
+import sys
 
 WIDTH = 360
 HEIGHT = 480
@@ -17,20 +18,21 @@ BLUE = (0, 0, 255)
 pygame.init()
 pygame.mixer.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("My Game")
+pygame.display.set_caption("The Game")
 clock = pygame.time.Clock()
 
 all_sprites = pygame.sprite.Group()
 # Game loop
-running = True
-while running:
+while True:
     # keep loop running at the right speed
     clock.tick(FPS)
     # Process input (events)
     for event in pygame.event.get():
         # check for closing window
         if event.type == pygame.QUIT:
-            running = False
+            pygame.quit()
+            sys.exit()
+            
 
     # Update
     all_sprites.update()
@@ -39,6 +41,5 @@ while running:
     screen.fill(BLACK)
     all_sprites.draw(screen)
     # *after* drawing everything, flip the display
-    pygame.display.flip()
+    pygame.display.update()
 
-pygame.quit()
