@@ -1,0 +1,18 @@
+isJump=True
+jumpCount=10
+
+neg=1
+
+if isJump:
+		if jumpCount>=-10:
+			neg=1
+			if jumpCount<0:
+				neg=-1
+			y-=(jumpCount**2)*0.4*neg
+			jumpCount-=1
+
+		else:
+			isJump = False
+			jumpCount = 10
+		
+		
